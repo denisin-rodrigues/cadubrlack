@@ -33,20 +33,15 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-              fbq('init', '1100161635665622');
-              fbq('track', 'PageView');
+              window.pixelId = "68d82ceb447fbce395ac5fb0";
+              var a = document.createElement("script");
+              a.setAttribute("async", "");
+              a.setAttribute("defer", "");
+              a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+              document.head.appendChild(a);
             `,
           }}
         />
-        <noscript>
-          <img
-            height="1"
-            width="1"
-            style={{ display: "none" }}
-            src="https://www.facebook.com/tr?id=1100161635665622&ev=PageView&noscript=1"
-          />
-        </noscript>
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -54,14 +49,6 @@ export default function RootLayout({
                 function loadTrackingScripts() {
                   if (window.trackingLoaded) return;
                   window.trackingLoaded = true;
-                  
-                  // Utmify Pixel
-                  window.pixelId = "685f46621679cf005cf5b4df";
-                  var utmifyPixel = document.createElement("script");
-                  utmifyPixel.async = true;
-                  utmifyPixel.defer = true;
-                  utmifyPixel.src = "https://cdn.utmify.com.br/scripts/pixel/pixel.js";
-                  document.head.appendChild(utmifyPixel);
                   
                   // Utmify UTMs
                   var utmifyUtms = document.createElement("script");
