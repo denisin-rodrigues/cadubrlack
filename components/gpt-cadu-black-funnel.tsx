@@ -1484,14 +1484,6 @@ export default function GPTCaduBlackFunnel() {
     <div className="relative">
       {renderStep()}
       <XPNotification show={showXP} points={50} />
-
-      {/* User Profile Display */}
-      <div className="fixed top-4 left-4 z-50 bg-black/80 backdrop-blur-sm p-3 rounded-lg border border-green-500/30">
-        <div className="flex items-center gap-2 text-sm">
-          <span className="text-green-400 font-bold">{userProfile.xp} XP</span>
-          <span className="text-green-600 bg-green-600/20 px-2 py-1 rounded">LVL {userProfile.level}</span>
-        </div>
-      </div>
     </div>
   )
 }
